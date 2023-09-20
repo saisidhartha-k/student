@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div *ngFor="let student of students">
+  <h2>{{ student.Sname }}</h2>
+  <p>SID: {{ student.Sid }}</p>
+  <p>Date of Birth: {{ student.dob | date:'mediumDate' }}</p>
+  <p>Age: {{ student.dob | age }} years</p>
+  <p>Course: {{ student.course }}</p>
+  <p>Fees: {{ student.fees | currency:'INR':'symbol':'1.2-2' }}</p>
+  <hr />
+</div>
+
+  
+</body>
+</html>
